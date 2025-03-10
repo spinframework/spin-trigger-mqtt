@@ -12,7 +12,7 @@ The plugin then instantiates a Wasm component and injects the message to the com
 
 Install MQTT Plugin:
 
-```
+```bash
 spin plugin install --url https://github.com/spinkube/spin-trigger-mqtt/releases/download/canary/trigger-mqtt.json --yes
 ```
 
@@ -26,13 +26,13 @@ If you want to learn more about Spin's plugin model, read [here](https://www.fer
 
 Install MQTT Template:
 
-```
+```bash
 spin templates install --git https://github.com/spinkube/spin-trigger-mqtt --upgrade
 ```
 
 ### Create Spin App
 
-```
+```bash
 spin new -t mqtt-rust mqtt-app
 ```
 
