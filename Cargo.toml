@@ -9,14 +9,14 @@ anyhow = "1.0.68"
 clap = { version = "3.1.15", features = ["derive", "env"] }
 futures = "0.3.25"
 serde = "1.0.188"
-spin-app = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-core = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-expressions = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-factors = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-runtime-factors = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-trigger = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-telemetry = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
-spin-factor-variables = { git = "https://github.com/fermyon/spin", tag = "v3.1.2" }
+spin-app = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-core = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-expressions = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-factors = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-runtime-factors = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-trigger = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-telemetry = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
+spin-factor-variables = { git = "https://github.com/spinframework/spin", tag = "v3.2.0" }
 tokio = { version = "1.37", features = ["full"] }
 tracing = { version = "0.1", features = ["log"] }
 paho-mqtt = { version = "0.12.3", features = ["vendored-ssl"] }
