@@ -7,7 +7,7 @@ type Command = FactorsTriggerCommand<MqttTrigger, FactorsBuilder>;
 
 #[tokio::main]
 async fn main() -> Result<(), anyhow::Error> {
-    let _telemetry_guard = spin_telemetry::init(build_info())?;
+    spin_telemetry::init(build_info())?;
     let trigger = Command::parse();
     trigger.run().await
 }
