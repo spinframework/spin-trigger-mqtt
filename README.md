@@ -67,6 +67,16 @@ To inject the Spin variable using environment variables:
 SPIN_VARIABLE_PASSWORD=password spin up
 ```
 
+To skip authentication, set the `username` and `password` fields to empty strings:
+
+```toml
+[application.trigger.mqtt]
+address = "mqtt://localhost:1883"
+username = "admin"
+password = "public"
+keep_alive_interval = "30"
+```
+
 ## State of Play
 
 1. Authenticates using anonymous and username/password to MQTT server.
@@ -74,11 +84,31 @@ SPIN_VARIABLE_PASSWORD=password spin up
 
 [more MQTT client/subscription attributes will be available soon]
 
+## Running an MQTT Broker
+
+Download [MQTTX CLI](https://github.com/emqx/MQTTX/tree/main/cli)
+
+```sh
+brew install emqx/mqttx/mqttx-cli
+```
+
+Run the EMQX broker: https://mqttx.app/docs/get-started
+
+```sh
+docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p 18083:18083 emqx/emqx
+```
+
+The default username and password of the broker is `admin` and `public`.
+
+> Alternatively, use [Mosquitto's public MQTT broker](https://test.mosquitto.org/) without authentication by setting the broker hostname to `test.mosquitto.org`.
+
 ## Dev Loop [Build and Install from Source]
+
+For this simple dev loop, make sure you have access to an MQTT broker. The following steps assume you followed the section to [run an MQTT broker locally](#running-an-mqtt-broker).
 
 * Open the repo in Dev Container or in pre-configured GitHub [Codespace](https://codespaces.new/spinkube/spin-trigger-mqtt)
 * Run ```make``` to build and install the plugin locally.
 * Update ```examples/mqtt-app/spin.toml``` to reflect your MQTT server details and ensure it's accessible on the network.
 * Run ```spin build --up --from examples/mqtt-app/spin.toml``` to run the example Spin app.
-* Run ```mqttx pub -t 'messages-in01' -h '<mqtt server ip>' -p 1883 -u <user> -P <password> -m 'Hello to  MQTT Spin Component!'``` with the hostname and credentials for your server, to publish the message which is then received by Spin app.
+* Run ```mqttx pub -t 'messages-in01' -h 'localhost' -p 1883 -u 'admin' -P 'public' -m 'Hello to  MQTT Spin Component!'``` with the hostname and credentials for your server, to publish the message which is then received by Spin app.
 * Optionally, run ```make clean``` to clean up and rebuild and install the plugin locally.
