@@ -1,4 +1,5 @@
 name = "trigger-mqtt"
+description = "A Spin trigger for MQTT events"
 version = "0.4.1"
 spin_compatibility = ">=2.0"
 license = "MIT"
