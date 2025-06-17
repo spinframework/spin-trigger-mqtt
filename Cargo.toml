@@ -1,6 +1,6 @@
 [package]
 name = "trigger-mqtt"
-version = "0.4.1"
+version = "0.4.2"
 edition = "2021"
 rust-version = "1.81"
 
@@ -9,14 +9,14 @@ anyhow = "1.0.68"
 clap = { version = "3.1.15", features = ["derive", "env"] }
 futures = "0.3.25"
 serde = "1.0.188"
-spin-app = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-core = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-expressions = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-factors = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-runtime-factors = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-trigger = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-telemetry = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
-spin-factor-variables = { git = "https://github.com/spinframework/spin", tag = "v3.3.0" }
+spin-app = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-core = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-expressions = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-factors = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-runtime-factors = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-trigger = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-telemetry = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
+spin-factor-variables = { git = "https://github.com/spinframework/spin", tag = "v3.3.1" }
 tokio = { version = "1", features = ["full"] }
 tracing = { version = "0.1.41", features = ["log"] }
 paho-mqtt = { version = "0.13.3", features = ["vendored-ssl"] }
