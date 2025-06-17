@@ -8,7 +8,7 @@ authors = ["Suneet Nangia <suneetnangia@gmail.com>"]
 
 [application.trigger.mqtt]
 address = "mqtt://localhost:1883"
-username = "user"
+username = "admin"
 password = "password"
 keep_alive_interval = "30"
 
@@ -25,15 +25,15 @@ topic = "messages-in02"
 qos = "0"
 
 [component.mqtt-c01]
-source = "target/wasm32-wasi/release/mqtt_app.wasm"
+source = "target/wasm32-wasip1/release/mqtt_app.wasm"
 allowed_outbound_hosts = ["mqtt://localhost:1883"]
 
 [component.mqtt-c01.build]
-command = "cargo build --target wasm32-wasi --release"
+command = "cargo build --target wasm32-wasip1 --release"
 
 [component.mqtt-c02]
-source = "target/wasm32-wasi/release/mqtt_app.wasm"
+source = "target/wasm32-wasip1/release/mqtt_app.wasm"
 allowed_outbound_hosts = ["mqtt://localhost:1883"]
 
 [component.mqtt-c02.build]
-command = "cargo build --target wasm32-wasi --release"
+command = "cargo build --target wasm32-wasip1 --release"

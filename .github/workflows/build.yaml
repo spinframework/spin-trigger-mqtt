@@ -31,7 +31,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: 1.81
+          toolchain: 1.85
         
       - name: Install dependencies
         run: |
@@ -54,8 +54,8 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - { target: "x86_64-unknown-linux-gnu", os: "ubuntu-20.04", arch: "amd64", extension: "" }
-          - { target: "aarch64-unknown-linux-gnu", os: "ubuntu-20.04", arch: "aarch64", extension: "" }
+          - { target: "x86_64-unknown-linux-gnu", os: "ubuntu-22.04", arch: "amd64", extension: "" }
+          - { target: "aarch64-unknown-linux-gnu", os: "ubuntu-22.04", arch: "aarch64", extension: "" }
           - { target: "x86_64-apple-darwin", os: "macos-13", arch: "amd64", extension: "" }
           - { target: "aarch64-apple-darwin", os: "macos-14", arch: "aarch64", extension: "" }
           - { target: "x86_64-pc-windows-msvc", os: "windows-latest", arch: "amd64", extension: ".exe" }
@@ -68,12 +68,12 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: 1.81
+          toolchain: 1.85
           targets: ${{ matrix.config.target }}
       - name: Install Spin
         uses: rajatjindal/setup-actions/spin@main
         with:
-          version: "v2.4.2"
+          version: "v3.3.0"
       - name: Install pluginify
         shell: bash
         run: spin plugins install --url https://github.com/itowlson/spin-pluginify/releases/download/canary/pluginify.json --yes
