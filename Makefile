@@ -37,3 +37,8 @@ clean:
 	rm -f trigger-mqtt-*.tar.gz
 	rm -f trigger-mqtt.json
 	spin plugin uninstall trigger-mqtt
+
+.PHONY: test
+test:
+	@echo "Running integration test..."
+	bash tests/integration_test.sh
