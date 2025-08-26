@@ -12,7 +12,8 @@ use std::{sync::Arc, time::Duration};
 wasmtime::component::bindgen!({
     path: ".",
     world: "spin-mqtt",
-    async: true,
+    imports: { default: async },
+    exports: { default: async },
 });
 
 use spin::mqtt_trigger::spin_mqtt_types as mqtt_types;
