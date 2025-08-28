@@ -18,7 +18,7 @@ topic = "{{mqtt-topic}}"
 qos = "{{mqtt-qos}}"
 
 [component.{{project-name | kebab_case}}]
-source = "target/wasm32-wasi/release/{{project-name | snake_case}}.wasm"
+source = "target/wasm32-wasip2/release/{{project-name | snake_case}}.wasm"
 allowed_outbound_hosts = ["{{mqtt-address}}"]
 [component.{{project-name | kebab_case}}.build]
-command = "cargo build --target wasm32-wasi --release"
+command = "cargo build --target wasm32-wasip2 --release"
