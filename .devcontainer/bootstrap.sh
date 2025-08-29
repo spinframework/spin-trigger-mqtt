@@ -2,7 +2,7 @@
 rustup update stable && rustup default stable && rustup component add clippy rustfmt
 
 # Installs wasm32 compiler targets
-rustup target add wasm32-wasip1 wasm32-unknown-unknown
+rustup target add wasm32-wasip2 wasm32-unknown-unknown
 
 # Installs cmake
 sudo apt update && sudo apt install cmake -y
@@ -14,7 +14,7 @@ if [ -d "spininstall" ]; then
 fi
 
 mkdir spininstall && cd spininstall
-curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash
+curl -fsSL https://spinframework.dev/downloads/install.sh | bash
 sudo mv spin /usr/local/bin/
 cd ../ && rm -fr spininstall
 

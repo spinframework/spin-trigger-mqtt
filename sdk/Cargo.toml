@@ -8,6 +8,6 @@ include = ["../spin-mqtt.wit"]
 name = "spin_mqtt_sdk"
 
 [dependencies]
-spin-executor = "3.1.1"
+spin-executor = "5.0.0"
 spin-mqtt-macro = { path = "macro" }
 wit-bindgen = { workspace = true }

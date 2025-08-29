@@ -13,7 +13,7 @@ The plugin then instantiates a Wasm component and injects the message to the com
 Install MQTT Plugin:
 
 ```bash
-spin plugin install --url https://github.com/spinkube/spin-trigger-mqtt/releases/download/canary/trigger-mqtt.json --yes
+spin plugin install --url https://github.com/spinframework/spin-trigger-mqtt/releases/download/canary/trigger-mqtt.json --yes
 ```
 
 [Note: release management for multiple versions of this plugin/trigger will be added soon]
@@ -27,7 +27,7 @@ If you want to learn more about Spin's plugin model, read [here](https://www.fer
 Install MQTT Template:
 
 ```bash
-spin templates install --git https://github.com/spinkube/spin-trigger-mqtt --upgrade
+spin templates install --git https://github.com/spinframework/spin-trigger-mqtt --upgrade
 ```
 
 ### Create Spin App
@@ -106,7 +106,7 @@ The default username and password of the broker is `admin` and `public`.
 
 For this simple dev loop, make sure you have access to an MQTT broker. The following steps assume you followed the section to [run an MQTT broker locally](#running-an-mqtt-broker).
 
-* Open the repo in Dev Container or in pre-configured GitHub [Codespace](https://codespaces.new/spinkube/spin-trigger-mqtt)
+* Open the repo in Dev Container or in pre-configured GitHub [Codespace](https://codespaces.new/spinframework/spin-trigger-mqtt)
 * Run ```make``` to build and install the plugin locally.
 * Update ```examples/mqtt-app/spin.toml``` to reflect your MQTT server details and ensure it's accessible on the network.
 * Run ```spin build --up --from examples/mqtt-app/spin.toml``` to run the example Spin app.

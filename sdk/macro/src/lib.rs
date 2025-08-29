@@ -41,13 +41,11 @@ fn preamble() -> proc_macro2::TokenStream {
             world: #world,
             path: #WIT_PATH,
             runtime_path: "::spin_mqtt_sdk::wit_bindgen::rt",
-            exports: {
-                world: Mqtt
-            },
             with: {
                 "spin:mqtt-trigger/spin-mqtt-types": ::spin_mqtt_sdk,
             }
         });
         pub struct Mqtt;
+        export!(Mqtt);
     }
 }
