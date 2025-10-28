@@ -56,7 +56,7 @@ jobs:
         config:
           - { target: "x86_64-unknown-linux-gnu", os: "ubuntu-22.04", arch: "amd64", extension: "" }
           - { target: "aarch64-unknown-linux-gnu", os: "ubuntu-22.04", arch: "aarch64", extension: "" }
-          - { target: "x86_64-apple-darwin", os: "macos-13", arch: "amd64", extension: "" }
+          - { target: "x86_64-apple-darwin", os: "macos-15-intel", arch: "amd64", extension: "" }
           - { target: "aarch64-apple-darwin", os: "macos-14", arch: "aarch64", extension: "" }
           - { target: "x86_64-pc-windows-msvc", os: "windows-latest", arch: "amd64", extension: ".exe" }
     steps:
