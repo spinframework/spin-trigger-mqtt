@@ -4,7 +4,7 @@ spin_manifest_version = 2
 name = "mqtt-app"
 version = "0.1.0"
 description = "Demo app to receive MQTT messages."
-authors = ["Suneet Nangia <suneetnangia@gmail.com>"]
+authors = ["The Spin authors"]
 
 [application.trigger.mqtt]
 address = "mqtt://localhost:1883"

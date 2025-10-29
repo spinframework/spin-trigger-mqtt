@@ -2,12 +2,13 @@
 name = "spin-mqtt-sdk"
 version = { workspace = true }
 edition = { workspace = true }
+rust-version = { workspace = true }
 include = ["../spin-mqtt.wit"]
 
 [lib]
 name = "spin_mqtt_sdk"
 
 [dependencies]
-spin-executor = "5.0.0"
+spin-executor = "5.1.0"
 spin-mqtt-macro = { path = "macro" }
 wit-bindgen = { workspace = true }
