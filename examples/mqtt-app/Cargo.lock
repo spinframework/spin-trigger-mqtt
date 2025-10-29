@@ -402,9 +402,9 @@ dependencies = [
 
 [[package]]
 name = "spin-executor"
-version = "5.0.0"
+version = "5.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cde323c004c7d9d68fbccd1dd6caee6330aaefbcb40562587fc0356bd0ea8e5f"
+checksum = "9fa74c56ad71afb64fff0566d7cb313567d0469ba2a75b0af58c323f59b74280"
 dependencies = [
  "futures",
  "once_cell",

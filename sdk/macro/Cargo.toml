@@ -2,6 +2,7 @@
 name = "spin-mqtt-macro"
 version = { workspace = true }
 edition = { workspace = true }
+rust-version = { workspace = true }
 include = ["../../spin-mqtt.wit"]
 
 [lib]
