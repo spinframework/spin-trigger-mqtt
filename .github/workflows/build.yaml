@@ -41,8 +41,10 @@ jobs:
       - name: lint code
         run: make lint
         
-      - name: audit code
-        run: cargo audit
+      - name: audit dependencies
+        run: |
+          cargo install cargo-audit --locked
+          cargo audit
 
       - name: Run Clippy
         run: cargo clippy --all -- -D warnings   
