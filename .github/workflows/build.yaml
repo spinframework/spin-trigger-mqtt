@@ -31,7 +31,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: 1.87
+          toolchain: 1.88
         
       - name: Install dependencies
         run: |
@@ -71,7 +71,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: 1.87
+          toolchain: 1.88
           targets: ${{ matrix.config.target }}
       - name: Install Spin
         uses: rajatjindal/setup-actions/spin@main
