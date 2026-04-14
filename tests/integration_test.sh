@@ -132,7 +132,8 @@ start_spin_app() {
     SPIN_LOGS_STDOUT="$SPIN_LOG_DIR/mqtt-c01_stdout.txt"
     
     # Build and start the example app in background, capturing output
-    spin build --up --from examples/mqtt-app/spin.toml --log-dir "$SPIN_LOG_DIR" &
+    spin build --from examples/mqtt-app/spin.toml
+    spin up --from examples/mqtt-app/spin.toml --log-dir "$SPIN_LOG_DIR" &
     SPIN_PID=$!
     
     log "Waiting for Spin application to start..."
