@@ -105,6 +105,30 @@ jobs:
             *.tar.gz
             *.json
 
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install rust target for example app
+        run: rustup target add wasm32-wasip2
+
+      - name: Install Spin
+        uses: fermyon/actions/spin/setup@v1
+        with:
+          # TODO: Switch to Spin 4.0 when it's available
+          version: "canary"
+          plugins: pluginify
+
+      - name: Install mqttx-cli
+        run: |
+          curl -LO https://www.emqx.com/en/downloads/MQTTX/v1.13.0/mqttx-cli-linux-x64
+          sudo install ./mqttx-cli-linux-x64 /usr/local/bin/mqttx
+
+      - name: Run integration test
+        run: make test
+
   package:
     name: Package plugin
     if: github.event_name == 'push'
