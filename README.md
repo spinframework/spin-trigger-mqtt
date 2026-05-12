@@ -1,5 +1,10 @@
 # An MQTT Trigger/Plugin for Fermyon Spin Framework
 
+> [!IMPORTANT]
+> **This repository has been archived.**
+>
+> This repository has been consolidated into the repository at [spinframework/spin-trigger-plugins](https://github.com/spinframework/spin-trigger-plugins). Please file issues and contribute there going forward.
+
 MQTT is a dominant communication protocol in IoT and edge scenarios, used by major products and services in manufacturing, automotive and other industries.
 Objective of this repo is to provide a robust plugin/trigger to receive MQTT messages in the Spin based wasm components.
 
